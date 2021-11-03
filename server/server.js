@@ -17,8 +17,6 @@ function server() {
   })
 
   app.get('/api/comments', (req, res) => {
-    // console.log(req.query)
-    // console.log(comments[req.query.itemId])
     itemComments = comments[req.query.itemId]
     if (itemComments === undefined) { 
       res.send([{
